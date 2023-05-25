@@ -1,0 +1,132 @@
+* {
+	margin: 0;
+	padding: 0;
+	font-family: 'poppins', sans-serif;
+}
+
+.banner {
+	width: 100%;
+	height: 100vh;
+	background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(https://images.unsplash.com/photo-1459755486867-b55449bb39ff?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fGNvZmZlZXxlbnwwfDB8MHx8fDA%3D&auto=format&fit=crop&w=600&q=60);
+	background-size: cover;
+	background-position: center;
+}
+
+.navbar {
+	width: 95%;
+	margin: auto;
+	height: 110px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.logo {
+	width: 125px;
+	cursor: pointer;
+}
+
+.navbar ul li {
+	list-style: none;
+	text-decoration: none;
+	margin: 0 10px;
+	color: #fff;
+	text-transform: uppercase;
+	display: inline-block;
+	position: relative;
+}
+
+.navbar ul li a {
+	text-decoration: none;
+	color: #fff;
+	text-transform: uppercase;
+
+}
+
+.navbar ul li::after {
+	content: '';
+	height: 3px;
+	width: 0;
+	background: #2B1700;
+	position: absolute;
+	left: 0;
+	bottom: -10px;
+	transition: 0.7s;
+}
+
+.navbar ul li:hover::after {
+	width: 100%;
+}
+
+.content {
+	width: 100%;
+	position: absolute;
+	top: 30%;
+	text-align: center;
+	color: #fff;
+}
+
+.content h1 {
+	font-size: 80px;
+	margin-top: 20px;
+	font-weight: 600;
+	-webkit-text-stroke: 1px #fff;
+	color: transparent;
+	background-image: linear-gradient(#fff,#fff);
+	background-repeat: no-repeat;
+	-webkit-background-clip: text;
+	background-position: -1000px 0;
+	animation: backcolor 7s linear infinite;
+}
+
+@keyframes backcolor {
+	100%{
+		background-position:0 0;
+	}
+	
+}
+
+.content p {
+	margin: 20px auto;
+	font-weight: 100;
+	line-height: 40px;
+	font-family: 'Oswald', sans-serif;
+	font-size: 30px;
+}
+
+button {
+	width: 200px;
+	padding: 15px 0;
+	text-align: center;
+	margin: 20px 10px;
+	border-radius: 25px;
+	font-weight: bold;
+	font-size: 15px;
+	border: 2px solid #997950;
+	background: #997950;
+	color: #fff;
+	cursor: pointer;
+	position: relative;
+	overflow: hidden;
+}
+
+span {
+	background: #997950;
+	height: 100%;
+	width: 0;
+	border-radius: 25px;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	z-index: -1;
+	transition: 0.7s;
+}
+
+button:hover span {
+	width: 100%;
+}
+
+button:hover {
+	border: 2px solid #997950;
+	background: transparent;
+}
